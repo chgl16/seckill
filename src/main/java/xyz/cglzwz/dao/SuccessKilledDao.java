@@ -1,5 +1,6 @@
 package xyz.cglzwz.dao;
 
+import org.apache.ibatis.annotations.Param;
 import xyz.cglzwz.entity.SuccessKilled;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public interface SuccessKilledDao {
      * @param userPhone
      * @return 插入的行数（1），0失败
      */
-    int insertSuccessKilled(long seckillId, String userPhone);
+    int insertSuccessKilled(@Param("seckillId") long seckillId, @Param("userPhone") String userPhone);
 
     /**
      * 根据id查询成功购买明细对象并携带秒杀产品对象实体的列表
