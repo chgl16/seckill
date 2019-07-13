@@ -23,6 +23,7 @@ public class SeckillDaoTest {
 
     @Test
     public void reduceNumber() {
+        // 为0（影响行数）即没有成功减少库存
         log.info("" + seckillDao.reduceNumber(1000, new Date()));;
     }
 

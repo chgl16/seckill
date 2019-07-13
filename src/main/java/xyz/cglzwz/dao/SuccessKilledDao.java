@@ -20,10 +20,10 @@ public interface SuccessKilledDao {
     int insertSuccessKilled(@Param("seckillId") long seckillId, @Param("userPhone") String userPhone);
 
     /**
-     * 根据id查询成功购买明细对象并携带秒杀产品对象实体的列表
+     * 根据id查询成功购买明细对象并携带秒杀产品对象实体
      * @param seckillId
      * @return
      */
-    List<SuccessKilled> queryByIdWithSeckill(long seckillId);
+    SuccessKilled queryByIdWithSeckill(@Param("seckillId") long seckillId, @Param("userPhone") String userPhone);
 }
 

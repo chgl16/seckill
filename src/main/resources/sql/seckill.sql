@@ -36,8 +36,8 @@ VALUES
 CREATE TABLE `t_success_killed`(
     `seckill_id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '商品库存id',
     `user_phone` VARCHAR(11) NOT NULL COMMENT '用户手机号',
-    `status` TINYINT NOT NULL DEFAULT -1 COMMENT '状态标识：-1:无效，0:成功，1:已付款',
-    `create_time` TIMESTAMP NOT NULL COMMENT '创建时间',
+    `status` TINYINT NOT NULL DEFAULT 0 COMMENT '状态标识：-1:无效，0:成功，1:已付款',
+    `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     PRIMARY KEY (`seckill_id`, `user_phone`),  /* 联合组建 */
     FOREIGN KEY (`seckill_id`) REFERENCES `t_seckill`(`seckill_id`),
     INDEX idx_create_time(`create_time`)

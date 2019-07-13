@@ -9,7 +9,7 @@
             VALUES (#{seckillId}, #{userPhone})
     </insert>
 
-    <select id="queryByIdWithSeckill" parameterType="long" resultType="SuccessKilled">
+    <select id="queryByIdWithSeckill"  resultType="SuccessKilled">
         <!-- 根据seckill_id获取成功信息表，携带商品对象，的列表 -->
         SELECT
             sk.seckill_id,
@@ -24,6 +24,6 @@
             s.create_time "seckill.create_time"
         FROM `t_success_killed` AS sk
         INNER JOIN `t_seckill` AS s ON sk.`seckill_id` = s.`seckill_id`
-        WHERE sk.`seckill_id` = #{seckillId}
+        WHERE sk.`seckill_id` = #{seckillId} AND sk.`user_phone` = #{userPhone}
     </select>
 </mapper>
