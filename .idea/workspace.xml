@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c4536a4-dd8b-48a5-b035-95aa0e5bc671" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/xyz/cglzwz/dao/SuccessKilledDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/cglzwz/dao/SuccessKilledDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/cglzwz/dao/SuccessKilledDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/seckill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/seckill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/xyz/cglzwz/dao/SeckillDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/xyz/cglzwz/dao/SeckillDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SuccessKilledDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SuccessKilledDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/seckill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sql/seckill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/xyz/cglzwz/dao/SuccessKilledDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xyz/cglzwz/dao/SuccessKilledDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/xyz/cglzwz/dao/SeckillDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/xyz/cglzwz/dao/SeckillDaoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -110,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
+              <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -399,7 +390,7 @@
       <option name="presentableId" value="Default" />
       <updated>1562767527916</updated>
       <workItem from="1562767530756" duration="5261000" />
-      <workItem from="1562855243097" duration="26976000" />
+      <workItem from="1562855243097" duration="27156000" />
     </task>
     <servers />
   </component>
@@ -436,7 +427,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32237000" />
+    <option name="totallyTimeSpent" value="32417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,7 +442,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17225201" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17225201" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -464,12 +455,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4953083" weight="0.75212467" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" visible="true" weight="0.5439094" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798927" weight="0.5439094" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49962714" weight="0.3101983" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49962714" visible="true" weight="0.3101983" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50469166" side_tool="true" weight="0.85835695" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -634,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/seckill.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -668,10 +652,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
