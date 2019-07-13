@@ -14,7 +14,7 @@ public interface SeckillDao {
     /**
      * 减库存
      * @param seckillId
-     * @param killTime 活动创建时间
+     * @param killTime 秒杀时间
      * @return  如果影响行数>1，表示更新的记录行数
      */
     int reduceNumber(long seckillId, Date killTime);
