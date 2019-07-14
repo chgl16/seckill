@@ -3,6 +3,8 @@ package xyz.cglzwz.service.impl;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 import xyz.cglzwz.dao.SeckillDao;
 import xyz.cglzwz.dao.SuccessKilledDao;
@@ -24,6 +26,7 @@ import java.util.List;
  * @author chgl16
  * @date 2019/07/13 21:53
  */
+@Service
 public class SeckillServiceImpl implements SeckillService {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -66,6 +69,7 @@ public class SeckillServiceImpl implements SeckillService {
         return md5;
     }
 
+    @Transactional
     public SeckillExcution excuteSeckill(long seckillId, String userPhone, String md5) throws SeckillException, SeckillCloseException, RepeatKillException {
         if (md5 == null || !md5.equals(getMD5(seckillId))) {
             // 错误的md5
