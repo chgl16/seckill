@@ -10,6 +10,7 @@ import xyz.cglzwz.dto.Exposer;
 import xyz.cglzwz.dto.SeckillExcution;
 import xyz.cglzwz.entity.Seckill;
 import xyz.cglzwz.entity.SuccessKilled;
+import xyz.cglzwz.enums.SeckillStatusEnum;
 import xyz.cglzwz.exception.RepeatKillException;
 import xyz.cglzwz.exception.SeckillCloseException;
 import xyz.cglzwz.exception.SeckillException;
@@ -90,7 +91,7 @@ public class SeckillServiceImpl implements SeckillService {
                 } else {
                     // 秒杀成功
                     SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId, userPhone);
-                    return new SeckillExcution(seckillId, 1, "秒杀成功", successKilled);
+                    return new SeckillExcution(seckillId, SeckillStatusEnum.SUCCESS, successKilled);
                 }
             }
         } catch (SeckillCloseException e1) {
