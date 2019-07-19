@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import xyz.cglzwz.dto.Exposer;
+import xyz.cglzwz.dto.SeckillExcution;
 import xyz.cglzwz.entity.Seckill;
 import xyz.cglzwz.service.SeckillService;
 
@@ -48,5 +49,17 @@ public class SeckillServiceImplTest {
 
     @Test
     public void excuteSeckill() {
+        int id = 1000;
+        String userPhone = "12345678901";
+        // 先获取md5
+        Exposer exposer = seckillService.exportSeckillUrl(id);
+        if (exposer.isExposed()) {
+            SeckillExcution seckillExcution = seckillService.excuteSeckill(id, userPhone, exposer.getMd5());
+            System.out.println(seckillExcution);
+        } else {
+            // 秒杀没有开始
+
+        }
+
     }
 }

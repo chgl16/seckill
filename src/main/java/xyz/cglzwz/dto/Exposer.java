@@ -26,10 +26,13 @@ public class Exposer {
     private long end;
 
     /** 正在秒杀中 */
-    public Exposer(boolean exposed, String md5, long seckillId) {
+    public Exposer(boolean exposed, String md5, long seckillId, long now, long start, long end) {
         this.exposed = exposed;
         this.md5 = md5;
         this.seckillId = seckillId;
+        this.now = now;
+        this.start = start;
+        this.end = end;
     }
 
     /** 还没开始或者已经结束 */

@@ -58,9 +58,9 @@ public class SeckillServiceImpl implements SeckillService {
         if (nowTime.getTime() < startTime.getTime() || nowTime.getTime() > endTime.getTime()) {
             return new Exposer(false, seckillId, nowTime.getTime(), startTime.getTime(), endTime.getTime());
         }
-        // 系统时间在秒杀之内
-        String md5 = null;
-        return new Exposer(true, md5, seckillId);
+        // 系统时间在秒杀之内，暴露秒杀接口
+        String md5 = getMD5(seckillId);
+        return new Exposer(true, md5, seckillId, nowTime.getTime(), startTime.getTime(), endTime.getTime());
     }
 
     private String getMD5(long seckillId) {
