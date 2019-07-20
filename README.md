@@ -5,9 +5,8 @@
 ![Maven](https://img.shields.io/badge/Maven-3.5-orange.svg)
 ![Spring](https://img.shields.io/badge/Spring-5.1-green.svg)
 ![Spring Security](https://img.shields.io/badge/SpringMVC-5.1-color.svg)
-![MyBatis](https://img.shields.io/badge/MyBatis-3.5-red.svg)  
+![MyBatis](https://img.shields.io/badge/MyBatis-3.5-red.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)
-![c3p0](https://img.shields.io/badge/c3p0-8.0-orange.svg)
 ![jQuery](https://img.shields.io/badge/jQuery-3.3-brown.svg)
 ![bootstrap](https://img.shields.io/badge/Bootstrap-3.3-purple.svg)
 
