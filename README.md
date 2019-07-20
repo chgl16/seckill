@@ -1,4 +1,4 @@
-# seckill
+# 秒杀系统seckill
 
 ## 开发环境
 
