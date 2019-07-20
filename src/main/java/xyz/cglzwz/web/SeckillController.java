@@ -72,7 +72,7 @@ public class SeckillController {
     @PostMapping(value = "/{seckillId}/exposer",
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public SeckillResult<Exposer> exposer(Long seckillId) {
+    public SeckillResult<Exposer> exposer(@PathVariable Long seckillId) {
         SeckillResult<Exposer> result;
         try {
             Exposer exposer = seckillService.exportSeckillUrl(seckillId);
@@ -91,18 +91,18 @@ public class SeckillController {
      * @param userPhone
      * @return
      */
-    @PostMapping(value = "/{seckillId}/{md5}/excution",
+    @PostMapping(value = "/{seckillId}/{md5}/execution",
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public SeckillResult<SeckillExcution> excute(@PathVariable Long seckillId,
-                                                 @PathVariable String md5,
+    public SeckillResult<SeckillExcution> execute(@PathVariable("seckillId") Long seckillId,
+                                                 @PathVariable("md5") String md5,
                                                  @CookieValue(value = "userPhone", required = false) String userPhone) {
 
         if (userPhone == null)
             return new SeckillResult<SeckillExcution>(false, "未注册");
         SeckillResult<SeckillExcution> result;
         try {
-            SeckillExcution excution = seckillService.excuteSeckill(seckillId, md5, userPhone);
+            SeckillExcution excution = seckillService.excuteSeckill(seckillId, userPhone, md5);
             result = new SeckillResult<SeckillExcution>(true, excution);
         } catch (RepeatKillException e) {
             SeckillExcution excution = new SeckillExcution(seckillId, SeckillStatusEnum.REPERT_KILL);
@@ -111,7 +111,8 @@ public class SeckillController {
             SeckillExcution excution = new SeckillExcution(seckillId, SeckillStatusEnum.END);
             return new SeckillResult<SeckillExcution>(false, excution);
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            logger.info("错误");
+            logger.error(e.getMessage());
             SeckillExcution excution = new SeckillExcution(seckillId, SeckillStatusEnum.INNER_ERROR);
             return new SeckillResult<SeckillExcution>(false, excution);
         }
@@ -123,7 +124,8 @@ public class SeckillController {
      * 获取系统时间
      * @return
      */
-    @GetMapping("/time/now")
+    @GetMapping(value = "/time/now", produces = "application/json;charset=UTF-8")
+    @ResponseBody
     public SeckillResult<Long> time() {
         Date now = new Date();
         return new SeckillResult<Long>(true, now.getTime());

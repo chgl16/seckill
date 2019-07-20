@@ -14,7 +14,6 @@ import xyz.cglzwz.service.SeckillService;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({
@@ -50,8 +49,8 @@ public class SeckillServiceImplTest {
     @Test
     public void excuteSeckill() {
         int id = 1000;
-        String userPhone = "12345678901";
-        // 先获取md5
+        String userPhone = "18718803003";
+        // 先获取md5 b032c651afcf2e6e547e52d8f8177f42
         Exposer exposer = seckillService.exportSeckillUrl(id);
         if (exposer.isExposed()) {
             SeckillExcution seckillExcution = seckillService.excuteSeckill(id, userPhone, exposer.getMd5());

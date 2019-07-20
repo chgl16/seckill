@@ -94,6 +94,7 @@ public class SeckillServiceImpl implements SeckillService {
                     throw new RepeatKillException("重复秒杀");
                 } else {
                     // 秒杀成功
+                    log.info("秒杀成功");
                     SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId, userPhone);
                     return new SeckillExcution(seckillId, SeckillStatusEnum.SUCCESS, successKilled);
                 }
@@ -103,7 +104,7 @@ public class SeckillServiceImpl implements SeckillService {
         } catch (RepeatKillException e2) {
             throw e2;
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
+            log.error(e.getMessage());
             // 所有编译期异常转换为运行时异常
             throw new SeckillException("秒杀内部异常：" + e.getMessage());
         }

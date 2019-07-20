@@ -32,7 +32,6 @@
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>1.2.3</version>
-      <scope>test</scope>
     </dependency>
     <!-- 实现slf4j接口并且整合 -->
     <dependency>
