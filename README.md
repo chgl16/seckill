@@ -26,7 +26,7 @@
 
 
 ## 高并发优化
-
+[秒杀系统流程及并发优化分析](https://cglzwz.xyz/2019/07/19/jia-gou/miao-sha-xi-tong-liu-cheng-ji-bing-fa-you-hua-fen-xi/#toc-heading-10)
 
 ## 问题故障
 #### 1. *Java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/exc/InvalidDefinitionException*
@@ -86,5 +86,14 @@
       <version>1.2.3</version>
     </dependency>
 ```
->总是忽略了这个，依赖都在了就是没有发现为啥绑定失败。
+>总是忽略了这个，依赖都在了就是没有发现为啥绑定失败。  
+
+
 ## 相关参考
+* [慕课. Java高并发秒杀API之业务分析与DAO层](https://www.imooc.com/learn/587)  
+
+* [慕课. Java高并发秒杀API之Service层](https://www.imooc.com/learn/631)  
+
+* [慕课. Java高并发秒杀API之Web层](https://www.imooc.com/learn/630)  
+
+* [慕课. Java高并发秒杀API之高并发优化](https://www.imooc.com/learn/632)
