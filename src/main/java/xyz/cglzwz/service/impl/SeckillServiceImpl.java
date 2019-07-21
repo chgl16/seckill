@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
+import xyz.cglzwz.cache.RedisDao;
 import xyz.cglzwz.dao.SeckillDao;
 import xyz.cglzwz.dao.SuccessKilledDao;
 import xyz.cglzwz.dto.Exposer;
@@ -37,6 +38,9 @@ public class SeckillServiceImpl implements SeckillService {
     private SeckillDao seckillDao;
 
     @Autowired
+    private RedisDao redisDao;
+
+    @Autowired
     private SuccessKilledDao successKilledDao;
 
     public List<Seckill> getSeckillList() {
@@ -48,9 +52,18 @@ public class SeckillServiceImpl implements SeckillService {
     }
 
     public Exposer exportSeckillUrl(long seckillId) {
-        Seckill seckill = seckillDao.queryById(seckillId);
+        // 先访问redis缓存
+        Seckill seckill = redisDao.getSeckill(seckillId);
         if (seckill == null) {
-            return new Exposer(false, seckillId);
+            // 缓存没有，访问数据库获取
+            seckill = seckillDao.queryById(seckillId);
+            if (seckill == null) {
+                // 数据库也没有，假的id
+                return new Exposer(false, seckillId);
+            } else {
+                // 数据库有，存入redis。然后下面操作处理给用户
+                redisDao.putSeckill(seckill);
+            }
         }
         Date startTime = seckill.getStartTime();
         Date endTime = seckill.getEndTime();

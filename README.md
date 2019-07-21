@@ -24,6 +24,10 @@
 
 ## 核心实现
 
+
+## 高并发优化
+
+
 ## 问题故障
 #### 1. *Java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/exc/InvalidDefinitionException*
 即便引入了该依赖，类都存在

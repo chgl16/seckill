@@ -51,4 +51,9 @@
         <property name="basePackage" value="xyz.cglzwz.dao"/>
     </bean>
 
+    <!-- 构造注入redis，完成属性注入 -->
+    <bean id="redisDao" class="xyz.cglzwz.cache.RedisDao">
+        <constructor-arg index="0" value="127.0.0.1"/>
+        <constructor-arg index="1" value="6379"/>
+    </bean>
 </beans>
